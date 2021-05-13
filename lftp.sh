@@ -17,3 +17,6 @@ mirror --reverse \
        --exclude-glob a-file-to-exclude \
        --exclude-glob a-file-group-to-exclude* \
        --exclude-glob other-files-to-exclude"
+
+
+http://lftp.yar.ru/lftp-man.html

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Remove current references of oCaml
 apt purge ocaml
 rm -r /usr/bin/ocaml*
@@ -8,12 +6,12 @@ rm -r /usr/bin/ocaml*
 apt purge unison
 rm -r /usr/bin/unison
 rm -r /usr/bin/unison-*
-apt-get autoremove
+
 # Compile OCaml from source
 mkdir -p /usr/src/ocaml
 cd /usr/src/ocaml
-wget http://caml.inria.fr/pub/distrib/ocaml-4.07/ocaml-4.07.0.tar.gz
-tar xzvf ocaml-4.07.0.tar.gz --strip-components 1
+https://caml.inria.fr/pub/distrib/ocaml-4.11/ocaml-4.11.1.tar.gz
+tar xzvf ocaml-4.11.1.tar.gz --strip-components 1
 ./configure
 make world.opt
 make install
@@ -23,7 +21,7 @@ make clean
 rm -rf /usr/src/unison/
 mkdir -p /usr/src/unison/
 cd /usr/src/unison/
-wget https://www.seas.upenn.edu/~bcpierce/unison/download/releases/unison-2.51.2/unison-2.51.2.tar.gz -O unison.tar.gz
+wget https://github.com/bcpierce00/unison/releases/download/v2.51.3/unison-v2.51.3+ocaml-4.11.1+x86_64.linux.tar.gz -O unison.tar.gz
 tar xzvf unison.tar.gz  --strip-components 1
 make UISTYLE=text || true
 

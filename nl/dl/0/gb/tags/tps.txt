@@ -1,1 +1,7 @@
+# Country: Germany (DE)
+# IP version: IPv4
+# Delegation status: Allocated || Assigned
+# Mode: Aggregated
+#
+
 147.135.7.179
